@@ -6,7 +6,7 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 20:18:57 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/11/17 21:36:48 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/11/22 20:19:58 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,13 @@ int ft_putstr(char *str)
 	return (i);
 }
 
-int	ft_putnbr(int n)
+int	ft_putnbr(int n, int check)
 {
 	int	res;
 	static int count = 0;
 	
+	if (check ==0)
+		count = 0;
 	if (n < 0)
 	{
 		ft_putchar('-');
@@ -58,7 +60,7 @@ int	ft_putnbr(int n)
 		res = n;
 	}
 	if (res >= 10)
-		ft_putnbr(res / 10);
+		ft_putnbr(res / 10, 1);
 	count += ft_putchar((char)(res % 10 + 48));
 	return(count);
 	}

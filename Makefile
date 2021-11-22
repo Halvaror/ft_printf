@@ -6,7 +6,7 @@
 #    By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 20:34:28 by alopez-b          #+#    #+#              #
-#    Updated: 2021/11/15 20:04:01 by alopez-b         ###   ########.fr        #
+#    Updated: 2021/11/22 20:19:07 by alopez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ CC = gcc
 
 CFLAGS	= -Wall -Wextra -Werror -DDEBUG
 
-NAME 	= ft_printf.a
+NAME 	= libftprintf.a
 
 all: $(NAME)
 
