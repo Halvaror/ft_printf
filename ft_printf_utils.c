@@ -6,7 +6,7 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 20:18:57 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/11/22 20:19:58 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/11/23 19:57:26 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,14 @@ int	ft_putnbr(int n, int check)
 		ft_putnbr(res / 10, 1);
 	count += ft_putchar((char)(res % 10 + 48));
 	return(count);
+	}
+	
+	int	putnbr_hex(int nbr)
+	{
+		char *nb;
+
+		while (nbr < 16)
+		{
+			= nbr / 16;
+		}
 	}
