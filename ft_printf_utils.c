@@ -6,7 +6,7 @@
 /*   By: alopezb <alopezb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 20:18:57 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/11/24 15:39:18 by alopezb          ###   ########.fr       */
+/*   Updated: 2021/11/24 19:30:06 by alopezb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,9 +75,7 @@ int	ft_putnbr_hex(unsigned int nbr, char *base, int check)
 		count = 0;
 	if (nbr >= 16)
 		count += ft_putnbr_hex(nbr/16, base, 1);
-	//printf("nbr: %d\n", nbr);
 	hex = nbr % 16;
-	//printf("hex: %d\n", hex);
 	count += ft_putchar(base[hex]);
 	return (count);
 }
