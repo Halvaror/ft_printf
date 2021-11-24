@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alopezb <alopezb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 20:18:57 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/11/23 21:46:44 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/11/24 15:39:18 by alopezb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,10 +65,10 @@ int	ft_putnbr(int n, int check)
 	return(count);
 }
 	
-int	ft_putnbr_hex(int nbr, char *base, int check)
+int	ft_putnbr_hex(unsigned int nbr, char *base, int check)
 {
 	static int	count = 0;
-	int hex;
+	unsigned int hex;
 
 	hex = 0;
 	if (check == 0)

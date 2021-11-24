@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alopezb <alopezb@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 21:05:40 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/11/23 21:46:49 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/11/24 15:40:01 by alopezb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ int	conversions(int count, const char *format, va_list ap,  int i)
 	else if (format[i] == 'x')
 		{
 			count += ft_putnbr_hex(va_arg(ap, int), UPPER_HEX, 0);
-			printf("int: %u\n", va_arg(ap, int));
+			//printf("int: %u\n", va_arg(ap, int));
 		}	
 	else if (format[i] == 'X')
-		count += ft_putnbr_hex(va_arg(ap, unsigned int), LOWER_HEX, 0);
+		count += ft_putnbr_hex(va_arg(ap, int), LOWER_HEX, 0);
 	return (count);
 }
 
@@ -65,9 +65,11 @@ int ft_printf(const char *format, ...)
 #if DEBUG
 int	main(int argc, char **argv)
 {
-	
+	int i = 100000 % 16;
+
+	printf("int: %d\n", i);
 	(void)argc;
 	(void)argv;
-	ft_printf("Hexadecimal: %x\n", -1);
+	ft_printf("Hexadecimal: %x\n", -2);
 }
 #endif
