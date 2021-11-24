@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alopezb <alopezb@student.42.fr>            +#+  +:+       +#+        */
+/*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 21:07:14 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/11/24 15:38:58 by alopezb          ###   ########.fr       */
+/*   Updated: 2021/11/24 20:03:00 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include<unistd.h>
 # include<stdlib.h>
 # include<stdarg.h>
+# include<string.h>
 
 # define UPPER_HEX "0123456789ABCDEF"
 # define LOWER_HEX "0123456789abcdef"

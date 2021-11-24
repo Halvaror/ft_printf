@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 20:34:28 by alopez-b          #+#    #+#              #
-#    Updated: 2021/11/23 21:15:07 by alopez-b         ###   ########.fr        #
+#    Updated: 2021/11/24 20:01:04 by alopez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ rm	= rm -f
 
 CC = gcc
 
-CFLAGS	= -Wall -Wextra -Werror -DDEBUG
+CFLAGS	= -Wall -Wextra -Werror -DDICK
 
 NAME 	= libftprintf.a
 

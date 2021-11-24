@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alopezb <alopezb@student.42.fr>            +#+  +:+       +#+        */
+/*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 21:05:40 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/11/24 19:28:42 by alopezb          ###   ########.fr       */
+/*   Updated: 2021/11/24 20:20:43 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	conversions(int count, const char *format, va_list ap,  int i)
 		count += ft_putchar(va_arg(ap, int));
 	else if (format[i] == 's')
 		count += ft_putstr(va_arg(ap, char *));
-	else if (format[i] == 'd')
+	else if (format[i] == 'd' || format[i] == 'i')
 		count += ft_putnbr(va_arg(ap, int), 0);
 	else if (format[i] == '%')
 		count += ft_putchar('%');
@@ -45,30 +45,29 @@ int ft_printf(const char *format, ...)
 	va_start(ap, format);
 	while (format[i])
 	{
+		//printf("format: %c\n",format[i]);
 		if (format[i] == '%')
 		{
 			i++;
-			count = conversions(count, format, ap, i++);
+			count = conversions(count, format, ap, i);
+			
 		}
-		if (format[i] != '%')
-		{
-			write(1, &format[i++], 1);
-			count++;
-		}
+		else if (format[i] != '%' || format[i] != 0)
+			count += ft_putchar(format[i]);
+		i++;
 	}
 	va_end(ap);
 	return (count);
 }
 
-#if DEBUG
+/*#if DICK
 int	main(int argc, char **argv)
 {
-	//int i = 100000 % 16;
-	char *c ="hola";
+	char c ='0';
 
-	printf("int: %p\n", c);
 	(void)argc;
 	(void)argv;
-	ft_printf("int: %p\n", c);
+	//printf("%c", c);
+	ft_printf("%c", c);
 }
-#endif
+#endif*/

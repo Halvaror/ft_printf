@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alopezb <alopezb@student.42.fr>            +#+  +:+       +#+        */
+/*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 20:18:57 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/11/24 19:30:06 by alopezb          ###   ########.fr       */
+/*   Updated: 2021/11/24 20:17:14 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,6 @@
 
 int ft_putchar(char c)
 {
-	if (!c)
-	{
-		write(1, "(null)", 6);
-		return (6);
-	}
 	write(1, &c, 1);
 	return(1);
 }
