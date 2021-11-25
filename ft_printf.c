@@ -6,7 +6,7 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 21:05:40 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/11/24 20:20:43 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/11/24 20:27:19 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,7 @@ int ft_printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			count = conversions(count, format, ap, i);
-			
+			count = conversions(count, format, ap, i);	
 		}
 		else if (format[i] != '%' || format[i] != 0)
 			count += ft_putchar(format[i]);
