@@ -6,7 +6,7 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 21:07:14 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/11/24 20:03:00 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/11/25 20:20:00 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ int ft_putstr(char *str);
 int	ft_putchar(char c);
 int	ft_putnbr(int n, int check);
 int	ft_putnbr_hex(unsigned int nbr, char *base, int check);
+int	ft_putnbr_u(unsigned int n, int check);
 
 #endif

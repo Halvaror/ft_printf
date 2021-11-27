@@ -6,12 +6,13 @@
 #    By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 20:34:28 by alopez-b          #+#    #+#              #
-#    Updated: 2021/11/24 20:01:04 by alopez-b         ###   ########.fr        #
+#    Updated: 2021/11/25 20:19:45 by alopez-b         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS	=	ft_printf.c \
 		ft_printf_utils.c \
+		ft_printf_utils2.c
 
 OBJS	= $(SRCS:.c=.o)
 
