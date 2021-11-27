@@ -6,7 +6,7 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 21:05:40 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/11/25 21:04:03 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/11/27 16:31:11 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ int	conversions(int count, const char *format, va_list ap,  int i)
 			count += ft_putnbr_hex(va_arg(ap, int), UPPER_HEX, 0);
 	else if (format[i] == 'x')
 		count += ft_putnbr_hex(va_arg(ap, int), LOWER_HEX, 0);
-	/*else if (format[i] == 'p')
-		count += ft_putnbr_hex(va_arg(ap, void *), LOWER_HEX, 0);*/
+	else if (format[i] == 'p')
+		count += ft_ptraddress(va_arg(ap, void *), LOWER_HEX);
 	return (count);
 }
 
@@ -62,13 +62,14 @@ int ft_printf(const char *format, ...)
 /*#if DICK
 int	main(int argc, char **argv)
 {
+	char str[]="hola";
 	int i;
 
 	(void)argc;
 	(void)argv;
-	i = ft_printf("%x\n", -1);
+	i = ft_printf("%p\n", str);
 	printf("%d\n", i);
-	i = printf("%x\n", -1);
+	i = printf("%p\n", str);
 	printf("%d\n", i);
 }
 #endif*/

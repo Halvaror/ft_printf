@@ -6,7 +6,7 @@
 /*   By: alopez-b <alopez-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 20:18:57 by alopez-b          #+#    #+#             */
-/*   Updated: 2021/11/25 21:02:48 by alopez-b         ###   ########.fr       */
+/*   Updated: 2021/11/27 16:34:08 by alopez-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,15 @@ int	ft_putnbr(int n, int check)
 
 	if (check ==0)
 		count = 0;
+	if (n == -2147483648)
+	{
+		count += ft_putstr("-2");
+		n = 147483648;
+	}
 	if (n < 0)
 	{
 		ft_putchar('-');
-		res = (unsigned int)(n * -1);
+		res = (n * -1);
 		count++;
 	}
 	else
